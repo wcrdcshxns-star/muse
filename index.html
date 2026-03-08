@@ -3952,10 +3952,11 @@
     const UPI_NAME = 'Premanjan Pradhan';
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    /* ══════════════════════════════════
-       POEM DATA (merged from both files)
-    ══════════════════════════════════ */
     const poems = {
+      mirror: {
+        title: 'The Mirror of Dreams', author: 'Premanjan Pradhan', meta: 'Educator & Poet · 2026', tag: 'Self-Reflection', ownerPoem: true,
+        text: "In a library of endless sky,\nwords take wing and tremble by,\neach syllable a bird of flame,\neach whisper calling out my name.\n\nAn ocean of numbers breaks the shore,\nbinary tides and data roar.\nFrom liquid light a figure climbs,\nbetween the seconds, beyond all time.\n\nA city of glass reflects my face,\nin every shadow, in every space.\nSome versions smile, some reach for me—\nam I their dream, or are they me?\n\nThe shelves, the waves, the mirrored streams,\nentangle into a woven dream.\nI wake to wonder, dim, untrue—\nor am I only dreaming you?\n\nNo scrolling forward no looking back\nJesus saved me alive I am awake.", tags: ['self-reflection', 'identity', 'philosophy']
+      },
       saffron: {
         title: 'Saffron', author: 'Premanjan Pradhan', meta: 'Educator & Poet · 2025', tag: 'Nature', ownerPoem: true,
         text: "A child from the valley, eyeing the vegetation\ncame across the purple hues of heaven\nThrough miles he trodded to witness\nSomething other than snow.\nHis heart reeved the monotony of hardship\nHimalayas was at the zenith of craftsmanship\nA wanderer of the valleys, with his herd\nStarted plucking those purples.\n\nThe lead craftsman scolded him black and blue,\nTook him to his tent and showed its value.\n'Saffron' they call it, history flew them and\nGreek men came around the eyes.\nThe newbie started coming early\nFive bucks, a day to touch that beauty!\nPhysics was in plucking, taught the man\nBe gentle and mind the angles.\n\nIn the following years he saw sketches\nOf the flower's anatomy as botany\nThe craftsman dissected cruelly, the stamens\nOut of the flower's heart.\nNext year demanded the yield to be sold\nFor the man, this boy was quite old.\nThe hustle of the market withered,\nWhen the master's economy met the valley's.\n\nDuring the heavy snow this lad, now señor\nCame, invited to dine with his mentor\nLittle did he knew the tasty haunch\nBore the saffron, that his rustic hands tore.\n\nThe name, taste, aroma, place all came together\nWhen the teacher started discussing Literature!", tags: ['nature', 'philosophy']
@@ -4040,9 +4041,9 @@
        RENDER HOME FEATURED CARD
     ══════════════════════════════════ */
     function renderFeatured() {
-      var p = poems.mourning;
+      var p = poems.mirror;
       document.getElementById('featuredCard').innerHTML =
-        '<div class="fc-top"><div class="fc-badges"><span class="fbadge">&#10022; Featured Poem</span><span class="fbadge fbadge-v">&#10003; Verified</span></div><div class="fc-title">' + p.title + '</div><div class="fc-author">' + p.author + ' &mdash; ' + p.tag + '</div></div><div class="fc-body"><div class="fc-lines">' + p.text.split('\n').slice(0, 4).join('<br>') + '</div><div class="fc-foot"><span class="fc-tag">' + p.tag + '</span><a href="#" class="rlink" onclick="showPoem(\'mourning\')">Read full poem &#8594;</a></div></div>';
+        '<div class="fc-top" style="background: url(\'assets/images/louvre-dream.png\') center/cover no-repeat;"><div class="fc-badges"><span class="fbadge">&#10022; Featured Poem</span><span class="fbadge fbadge-v">&#10003; Verified</span></div><div class="fc-title">' + p.title + '</div><div class="fc-author">' + p.author + ' &mdash; ' + p.tag + '</div></div><div class="fc-body"><div class="fc-lines">' + p.text.split('\n').slice(0, 4).join('<br>') + '</div><div class="fc-foot"><span class="fc-tag">' + p.tag + '</span><a href="#" class="rlink" onclick="showPoem(\'mirror\')">Read full poem &#8594;</a></div></div>';
     }
 
     /* ══════════════════════════════════
