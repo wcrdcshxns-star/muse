@@ -51,6 +51,9 @@
       --radius-sm: 12px;
       --shadow: 0 8px 32px rgba(8, 131, 149, 0.12), 0 2px 8px rgba(8, 131, 149, 0.07);
       --shadow-lg: 0 20px 60px rgba(8, 131, 149, 0.18), 0 8px 24px rgba(9, 99, 126, 0.1);
+      /* CAMPAIGN VARIABLES */
+      --c-accent: #8C2121;
+      --c-accent-soft: rgba(140, 33, 33, 0.1);
     }
 
     html {
@@ -746,6 +749,119 @@
 
       to {
         transform: translateX(-50%)
+      }
+    }
+
+    /* CAMPAIGN SECTION STYLES */
+    .campaign-sec {
+      padding: 8rem 5vw;
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(8, 131, 149, 0.08);
+    }
+
+    .c-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      align-items: center;
+      gap: clamp(2rem, 5vw, 6rem);
+    }
+
+    .c-visual {
+      position: relative;
+      z-index: 1;
+    }
+
+    .c-img {
+      width: 100%;
+      border-radius: 32px;
+      box-shadow: 0 40px 80px rgba(9, 99, 126, 0.15);
+      transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+    }
+
+    .c-visual:hover .c-img {
+      transform: scale(1.02) translateY(-5px);
+    }
+
+    .c-glow {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: -20px;
+      bottom: -20px;
+      background: radial-gradient(circle, var(--pink) 0%, transparent 70%);
+      opacity: 0.2;
+      z-index: -1;
+      border-radius: 40px;
+    }
+
+    .c-pill {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--ink);
+      padding: 0.4rem 1.2rem;
+      border-radius: 50px;
+      font-size: .63rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 16px rgba(253, 181, 206, 0.28);
+    }
+
+    .c-h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      letter-spacing: -.03em;
+    }
+
+    .c-p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+      max-width: 520px;
+    }
+
+    .c-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .c-subtext {
+      font-size: 0.85rem;
+      color: var(--muted);
+      opacity: 0.7;
+      font-weight: 500;
+    }
+
+    @media (max-width: 900px) {
+      .c-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+      }
+
+      .c-btns {
+        align-items: center;
+      }
+
+      .c-p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .c-h2 {
+        font-size: 2.8rem;
       }
     }
 
@@ -2808,6 +2924,32 @@
         <div class="feat-card reveal" id="featuredCard"></div>
       </div>
     </header>
+
+    <!-- Campaign Section -->
+    <section id="campaign" class="campaign-sec">
+      <div class="c-container">
+        <div class="c-visual">
+          <img src="assets/images/campaign-banner.png" alt="International Poetry Day 2026" class="c-img">
+          <div class="c-glow"></div>
+        </div>
+        <div class="c-body">
+          <span class="c-pill">Event • 21st March</span>
+          <h2 class="c-h2">
+            Celebrate <span class="ital">International</span><br>
+            <span class="gtext">Poetry Day 2026</span>
+          </h2>
+          <p class="c-p">
+            Join students and young writers across India to honor the written word.
+            Share your poems, musings, and haikus to be featured on our platform on the 21st of March.
+            Your voice is the heartbeat of this community.
+          </p>
+          <div class="c-btns">
+            <button onclick="showPage('submit')" class="btn btn-primary">🖋 Submit for Campaign</button>
+            <p class="c-subtext">Targeting students and writers in their 20s and 30s.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SCROLL STRIP -->
     <div class="scroll-strip" aria-hidden="true">
