@@ -996,10 +996,12 @@
 
     /* MISSION STRIP */
     .mission-strip {
-      background: linear-gradient(160deg, #09637E 0%, #088395 40%, #7AB2B2 100%);
+      background: linear-gradient(160deg, rgba(9, 99, 126, 0.9) 0%, rgba(8, 131, 149, 0.85) 40%, rgba(122, 178, 178, 0.9) 100%), url('https://images.unsplash.com/photo-1473186505569-9c61870c11f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODU3NDR8MHwxfHNlYXJjaHwxfHxwb2V0cnl8ZW58MHx8fHwxNzcyOTMzNzk2fDA&ixlib=rb-4.1.0&q=80&w=1080');
+      background-size: cover;
+      background-position: center;
       padding: 6rem 5vw;
       position: relative;
-      overflow: hidden
+      overflow: hidden;
     }
 
     .mission-strip::before {
@@ -2935,6 +2937,11 @@
       <p class="eyebrow">Archive</p>
       <h2 class="h2">Published <em>Poems</em></h2>
       <p class="lead">Browse original, editorially verified poems by our young contributors.</p>
+      <div style="margin-bottom:2rem; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-lg);">
+        <img
+          src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODU3NDR8MHwxfHNlYXJjaHwxfHxsaWJyYXJ5fGVufDB8fHx8MTc3MjkzMzgwM3ww&ixlib=rb-4.1.0&q=80&w=1080"
+          style="width:100%; height:250px; object-fit:cover; display:block;" alt="Library of Poems">
+      </div>
       <div class="filter-bar">
         <span class="filter-label">Filter:</span>
         <button class="filter-chip active" onclick="filterPoems('all',this)">All</button>
@@ -2980,6 +2987,11 @@
       <p class="eyebrow">Get Published</p>
       <h2 class="h2">Publish Your <em>Work</em></h2>
       <p class="lead">Share your original poems, stories, and essays with the world.</p>
+      <div style="margin-bottom:3rem; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-lg);">
+        <img
+          src="https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODU3NDR8MHwxfHNlYXJjaHwxfHx3cml0aW5nfGVufDB8fHx8MTc3MjkzMzgwMnww&ixlib=rb-4.1.0&q=80&w=1080"
+          style="width:100%; height:300px; object-fit:cover; display:block;" alt="Publish Your Work">
+      </div>
       <div class="publish-options">
         <div class="publish-card">
           <div class="publish-icon">📝</div>
@@ -3124,6 +3136,11 @@
         <p class="eyebrow">Open Submissions</p>
         <h2 class="h2">Submit Your <em>Work</em></h2>
         <p class="lead">Choose your submission type, complete the form, and make your publishing contribution.</p>
+        <div style="margin-bottom:2rem; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-lg);">
+          <img
+            src="https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODU3NDR8MHwxfHNlYXJjaHwxfHxzdHVkZW50c3xlbnwwfHx8fDE3NzI5MzM4MDR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            style="width:100%; height:200px; object-fit:cover; display:block;" alt="Submit Work">
+        </div>
         <div class="form-tabs">
           <button class="tab-btn active" onclick="switchTab('poem')">&#128221; Poem — ₹500</button>
           <button class="tab-btn" onclick="switchTab('story')">&#128214; Short Story — ₹1,000</button>
@@ -3326,8 +3343,8 @@
       <div class="about-grid">
         <div class="about-frame">
           <img
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='533' viewBox='0 0 400 533'%3E%3Crect width='400' height='533' fill='%23EBF4F6'/%3E%3Ccircle cx='200' cy='185' r='82' fill='%23A5C89E' opacity='.5'/%3E%3Cellipse cx='200' cy='430' rx='130' ry='95' fill='%237AB2B2' opacity='.3'/%3E%3Ctext x='200' y='215' text-anchor='middle' font-size='100' opacity='.2'%3E&#x1F468;%3C/text%3E%3C/svg%3E"
-            class="about-img" alt="Premanjan Pradhan">
+            src="https://images.unsplash.com/photo-1667563692030-6aea832f195c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODU3NDR8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB0ZWFjaGVyJTIwbWFsZXxlbnwwfHx8fDE3NzI5MzM4NjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+            class="about-img" alt="Premanjan Pradhan" style="object-fit:cover;">
           <div class="about-badge">
             <div class="ab-num">42+</div>
             <div class="ab-lbl">Works Published</div>
